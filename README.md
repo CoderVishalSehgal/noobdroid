@@ -36,7 +36,7 @@ Once you've decided which groups you'd like to work with, complete the following
 
 STEP 1 - GO TO THE "List of Contributors" FILE AND EDIT IT ON A SEPARATE BRANCH
 
-STEP 2 - ADD YOUR FULL NAME, CHOICE OF CONTRIBUTOR ROLES AND YOUR UNIQUE 2 DIGIT MEMBER ID [00 - 99]. (Note: Pick one that is not already taken. This ID is to assign tasks and deadlines and to ensure no confusion between, say two members with same name, and we will be creating pull requests using your respective IDs.
+STEP 2 - ADD YOUR FULL NAME, CHOICE OF CONTRIBUTOR ROLES AND YOUR UNIQUE 2 DIGIT MEMBER ID [00 - 99]. (Note: Pick one that is not already taken. This ID is to assign tasks and deadlines and to ensure no confusion between, say two members with same name, and we will be creating pull requests using your respective IDs).
 
 STEP 3 - CREATE A PULL REQUEST
 
