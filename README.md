@@ -1,7 +1,5 @@
 # noobdroid.com
 Kindly check the website first.
-Website is currently running on Wordpress but in the future we will shift to a HTML, CSS and JS site.
-
 
 noobdroid.com is a tech blog for beginners to help them learn Android Dev faster.
 The website will provide a tool for both beginner & advanced coders to code faster and recall syntax better when working in the Android environment (by using custom boilerplate code called cheat-codes to pseudocode).
@@ -10,7 +8,7 @@ This will be a FOSS (Free Open Source Software) project but we will follow a cer
 
 WHO CAN CONTRIBUTE?
 
-This is a project that keeps in mind the varying interests and expertise level of the different members of the community. But one common goal for the community is learning Android. So, every single member, no matter the experience or level, can contribute in making tutorials for the different topics in Android.
+This is a project that keeps in mind the varying interests and expertise level of the different members of the community. One common goal for the community is learning Android. So, every single member, no matter the experience or level, can contribute in making tutorials for different topics in Android.
 
 HOW TO CONTRIBUTE?
 
