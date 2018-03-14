@@ -1,0 +1,162 @@
+TextView myTextView = (TextView) findViewById(R.id.text_view);
+myTextView.setText(R.string.my_text); // This Method set the Message to the TextView.
+myTextView.setTextSize(R.dimen.text_size); // This method is used to set Text Size.
+myTextView.setWidth(int); // This method sets the width of the TextView.
+myTextView.setHeight(int); // This methods sets the height of the TextView.
+
+TypeFace typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/font_one.ttf");
+myTextView.setTypeface(typeface, int); // This method is used to change the TypeFace of the Font or simply means to change the font style. Here int is 0 - bold, 1 - italic, 2 - normal.
+
+myTextView.setTextIsSelectable(true); // This method helps to set text selectable if we pass true.
+myTextView.setTextColor(R.color.my_color); // This method helps to set Text Color.
+--------------------------------------------------------------------
+
+ImageView.
+
+ImageView imageView = (ImageView) findViewById(R.id.my_image_view);
+imageView.setImageResource(R.drawable.image); // This methods sets a drawable to the ImageView.
+imageView.setMaxWidth(int); // This method sets the Maximum width of the ImageView.
+imageView.setMaxHeight(int); // This method sets the Maximum height of the ImageView.
+imageView.setScaleType(ImageView.ScaleType); // This method helps to set the ScaleType of image like center, centerCrop, fitCenter, fitXY,.. etc.
+--------------------------------------------------------------------
+
+Button.
+
+Button button = (Button) findViewById(R.id.my_button);
+button.setText(R.string.text);//This method sets the text to a Button.
+ button.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 // Code here executes on main thread after user presses button
+             }
+         });
+ --------------------------------------------------------------------
+
+ EditText.
+
+ EditText editText = (EditText) findViewById(R.id.my_edit_text);
+ editText.setWidth(int);
+ editText.setHeight(int);
+ editText.setText(R.string.text); //Sets the text to be displayed.
+ editText.getText(); // Return the text that EditText is displaying.
+--------------------------------------------------------------------
+
+Spinner.
+
+Spinner spinner = (Spinner) findViewById(R.id.spinner);
+// Create an ArrayAdapter using the string array and a default spinner layout
+ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        R.array.planets_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+spinner.setAdapter(adapter);
+--------------------------------------------------------------------
+
+CheckBox.
+
+CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox_id);
+
+--------------------------------------------------------------------
+
+SeekBar.
+
+SeekBar seekBar = (SeekBar) findViewById(R.id.seek_bar);
+seekBar.setMax(100); // This method is used to set the Maximum value of the Seekbar.
+seekBar.setProgress(10); // This method is used to set the initial value of the progress.
+seekBar.setOnSeekBarChangeListener(new SeekBar.setOnSeekBarChangeListener(){
+
+@Override  
+    public void onProgressChanged(SeekBar seekBar, int progress,  
+            boolean fromUser) {  
+        Toast.makeText(getApplicationContext(),"seekbar progress: "+progress, Toast.LENGTH_SHORT).show();  
+    
+    } // This method Notification that the progress level has changed.  
+
+    @Override  
+    public void onStartTrackingTouch(SeekBar seekBar) {  
+        Toast.makeText(getApplicationContext(),"seekbar touch started!", Toast.LENGTH_SHORT).show();  
+    } // This method Notification that the user has started a touch gesture.  
+
+
+
+    @Override  
+    public void onStopTrackingTouch(SeekBar seekBar) {  
+        Toast.makeText(getApplicationContext(),"seekbar touch stopped!", Toast.LENGTH_SHORT).show();  
+    } // This Method Notification that the user has finished a touch gesture.
+
+
+});
+--------------------------------------------------------------------
+
+ ProgressBar.
+
+ ProgressBar progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+ progressBar.setProgress(int); // This method sets the progress of the progressBar.
+
+--------------------------------------------------------------------
+
+ RadioButton.
+
+ // Add onClick attribute on the RadioGroup Element in XML and sets your function.
+ android:onClick="onRadioButtonClicked"
+
+ Java.
+
+ private void onRadioButtonClicked(View view){
+
+// THe boolean checked stores true.
+ boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.yes_button:
+                if (checked)
+                	// Add your action here when checkbox is clicked.
+                    Toast.makeText(this, "Your Device Android is Lollipop", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.no_button:
+                if (checked)
+                	// Add your action here when this checkbox is clicked.
+                    Toast.makeText(this, "Your Device Android is Marshmellow", Toast.LENGTH_SHORT).show();
+                break;
+            
+        }
+
+ }
+
+ --------------------------------------------------------------------
+
+  Switch.
+
+  Switch switch = (Switch) findViewById(R.id.switch_view);
+  switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+
+                if (isChecked) {
+                	// Add your action here when the switch is checked.
+                    Toast.makeText(getContext(), "Switch On", Toast.LENGTH_SHORT).show();
+                } else {
+                	// Add your action here when the switch is unchecked.
+                    Toast.makeText(getContext(), "Switch Off", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+--------------------------------------------------------------------
+
+ RatingBar.
+
+ RatingBar ratingBar = (RatingBar) findViewById(R.id.rating_bar);
+ ratingBar.getNumStars(); // This method returns the Number of Stars shown with return type int.
+   ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {s
+                Toast.makeText(getContext(), "You Rate " + String.valueOf(v), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+   // RatingBar ratingBar: The RatingBar whose rating has changed.
+   // float v: The current rating. This will be in the range 0..numStars.
+   // boolean b: True if the rating change was initiated by a user's touch gesture or arrow key/horizontal trackbell movement.
+
+--------------------------------------------------------------------
