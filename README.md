@@ -37,12 +37,3 @@ STEP 1 - GO TO THE "List of Contributors" FILE AND EDIT IT ON A SEPARATE BRANCH
 STEP 2 - ADD YOUR FULL NAME, CHOICE OF CONTRIBUTOR ROLES AND YOUR UNIQUE 2 DIGIT MEMBER ID [00 - 99]. (Note: Pick one that is not already taken. This ID is to assign tasks and deadlines on the live website and to ensure no confusion between, say two members with same name. You will also need to create pull requests using your respective IDs).
 
 STEP 3 - CREATE A PULL REQUEST
-
-Structure for taking contributions - 
-
-Point #1:
-We will use version control (GitHub) as our workflow model. Any changes to be made should be made on a separate branch. Branch should be named (e.g.)'Feature: ViewGroup Tutorial (by Member #05)'
-
-Point #2:
-If you only have a few minutes per day to contribute, we suggest working in the content group. Since all of us are taking the courses at Udacity, making tutorials for concepts you're already learning is something you can do in a few minutes.
-
