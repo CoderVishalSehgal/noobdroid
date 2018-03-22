@@ -1,0 +1,23 @@
+Radio Button Java Code.
+
+Now assume that we have to check that our radio button is checked when activity comes back to resume state, this approach then
+helps to check whether that RadioButton is selected or not.
+Also, as the Java approach is good rather than that onClick atttribute in the RadioButton Element(as that only works when the button clicked).
+
+//Code.
+
+RadioGroup radioGroup;
+
+@Override
+    protected void onResume() {
+        super.onResume();
+        
+        radioGroup = findViewById(R.id.my_radio_group);//Assign your radioGroup id.
+        boolean checked = ((RadioButton)radioGroup.findViewById(R.id.my_button)).isChecked();// Checking for particular button that it is checked or not.
+
+        if(checked){
+            Toast.makeText(getApplicationContext(),"Yes! it is checked", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(getApplicationContext(), "No, not checked", Toast.LENGTH_SHORT).show();
+        }
+    }
